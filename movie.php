@@ -3,11 +3,11 @@
 class Movie{
   public $titolo;
   public $data_uscita;
-  public $costi;
+  public $costi = 0;
   public $scritto_da;
   public $diretto_da;
   public $calcolo_prezzo;
-  private $elevazione = 0;
+  public $elevazione = 0;
   public $premi = array();
   static $K = 0; // contatore di istanze
 
@@ -24,5 +24,7 @@ class Movie{
   public function setPrezzo(){
     $this->elevazione  = strlen((string)$this->costi);
     $this->calcolo_prezzo = $this->costi / pow(10, $this->elevazione);
+    /* $this->calcolo_prezzo = 30000000 / pow(10,8);
+    return "string di costi " . $this->costi; */
   }
 }

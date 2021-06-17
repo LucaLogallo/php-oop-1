@@ -1,6 +1,6 @@
 <?php 
 
-  require_once __DIR__ . './movie.php';
+  require_once __DIR__ . './Movie.php';
 
   $film1 = new Movie("Kill Bill vol.1", "24/10/2003", 30000000, "Quentin Tarantino","Quentin Tarantino");
   $film1->premi = ["2004 - Golden Globe","2004 - Premio BAFTA", "2004 - Empire Awards","2003 - European Film Awards","2004 - Nastro d'argento","2003 - Las Vegas Film Critics Society Awards","2004 - MTV Movie Awards", "2003 - Satellite Award", "2004 - Saturn Award","2004 - Central Ohio Film Critics Association Awards" ];
@@ -30,16 +30,51 @@
   <h1>costi: <?php echo $film1->costi ?></h1>
   <h1>scritto da: <?php echo $film1->scritto_da ?></h1>
   <h1>diretto da: <?php echo $film1->diretto_da ?></h1>
-  <h1>costi: <?php echo $film1->calcolo_prezzo ?></h1>
+  <!-- <h1>lung: <?php echo $film1->elevazione ?></h1> -->
+  <h1>costi al dettaglio: <?php echo $film1->calcolo_prezzo;?></h1>
   <ul>
   <?php foreach($film1->premi as $premio){
      ?>
     <li>
     <?php echo $premio ?>
     </li>
-    <?php } ?>
+    <?php }?>
   </ul>
-  
+  <!-- /film 1 -->
 
+  <!-- film 2 -->
+  <h1>nome:<?php echo $film2->titolo ?></h1>
+  <h1>data di uscita : <?php echo $film2->data_uscita ?></h1>
+  <h1>costi: <?php echo $film2->costi ?></h1>
+  <h1>scritto da: <?php echo $film2->scritto_da ?></h1>
+  <h1>diretto da: <?php echo $film2->diretto_da ?></h1>
+  <!-- <h1>lung: <?php echo $film2->elevazione ?></h1> -->
+  <h1>costi al dettaglio: <?php echo $film2->calcolo_prezzo;?></h1>
+  <ul>
+  <?php foreach($film2->premi as $premio){
+     ?>
+    <li>
+    <?php echo $premio ?>
+    </li>
+    <?php }?>
+  </ul>
+  <!-- /film 2 -->
+
+  <!-- film 3 -->
+  <h1>nome:<?php echo $film3->titolo ?></h1>
+  <h1>data di uscita : <?php echo $film3->data_uscita ?></h1>
+  <h1>costi: <?php echo $film3->costi ?></h1>
+  <h1>scritto da: <?php echo $film3->scritto_da ?></h1>
+  <h1>diretto da: <?php echo $film3->diretto_da ?></h1>
+  <!-- <h1>lung: <?php echo $film3->elevazione ?></h1> -->
+  <h1>costi al dettaglio: <?php echo $film3->calcolo_prezzo;?></h1>
+  <ul>
+  <?php foreach($film3->premi as $premio){
+     ?>
+    <li>
+    <?php echo $premio ?>
+    </li>
+    <?php }?>
+  </ul>
 </body>
 </html>
